@@ -17,6 +17,7 @@
  **/
 - (void) initialize
 {
+    self.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     self.part1Color = [UIColor greenColor];
     self.part2Color = [UIColor grayColor];
     self.defaultExceedColor = [UIColor redColor];
