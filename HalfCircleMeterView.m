@@ -140,7 +140,8 @@
     
     /* DRAWING */
     
-    //Drawing the first part (maximum value part or current value part when it exceeds the maximum value)
+    //Drawing is no clockwise oriented, so second part is drawn before the first part
+    //Drawing the second part (maximum value part or current value part when it exceeds the maximum value)
     UIBezierPath *part2Path = [UIBezierPath bezierPath];
     [part2Path moveToPoint:center];
     [part2Path addArcWithCenter:center
@@ -152,7 +153,7 @@
     [self.part2Color setFill];
     [part2Path fill];
     
-    //Drawing the second part (current value part or maximum value part when the current value exceeds the maximum value)
+    //Drawing the first part (current value part or maximum value part when the current value exceeds the maximum value)
     UIBezierPath *part1Path = [UIBezierPath bezierPath];
     [part1Path moveToPoint:center];
     [part1Path addArcWithCenter:center
